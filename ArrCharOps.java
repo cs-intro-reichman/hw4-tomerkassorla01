@@ -129,7 +129,7 @@ public class ArrCharOps {
             return 0;
         }
         long hash = 0, power = 1;
-        for (int i = n-1; i > 0; i--) {
+        for (int i = n-1; i >= 0; i--) {
             hash += arr[i] * power;
             power *= 7;
         }
@@ -162,7 +162,7 @@ public class ArrCharOps {
      *         return -2 if there is an error with the input.
      */
     public static int compareTo(String str1, String str2) {
-        if (str1 == null || str2 == null) {
+        if (str1.isEmpty() || str2.isEmpty()) {
             return -2;
         }
         int length1 = str1.length();
